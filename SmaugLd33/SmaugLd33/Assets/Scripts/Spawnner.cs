@@ -16,5 +16,9 @@ public class Spawnner : MonoBehaviour
 	void Update ()
 	{
 		Ray r = Camera.main.ScreenPointToRay (Input.mousePosition);
+		RaycastHit hit;
+		if (Physics.Raycast (r, out hit)) {
+			transform.LookAt (hit.point);
+		}
 	}
 }
