@@ -15,6 +15,12 @@ public class Spawnner : MonoBehaviour
 	[SerializeField]
 	private float
 		MaxHoldTime = 2.0f;
+	[SerializeField]
+	private float
+		Speed = 5.0f;
+	[SerializeField]
+	private float
+		BulletSpeedMultiplier = 2.0f;
 
 
 	private float HoldTime = 0f;
@@ -40,9 +46,11 @@ public class Spawnner : MonoBehaviour
 			HoldTime /= MaxHoldTime;
 			HoldTime = Mathf.Clamp01 (HoldTime);
 			GameObject ball = Instantiate (Ball, transform.position, transform.localRotation) as GameObject;
-			ball.GetComponent<Bullet> ().Initialize (Mathf.Lerp (MinLifeTime, MaxLifeTime, HoldTime));
-			Debug.Log (Mathf.Lerp (MinLifeTime, MaxLifeTime, HoldTime));
+			ball.GetComponent<Bullet> ().Initialize (Mathf.Lerp (MinLifeTime, MaxLifeTime, HoldTime), Mathf.Lerp (1, BulletSpeedMultiplier, HoldTime));
 			HoldTime = 0;
 		}
+
+		Vector3 move = Vector3.forward * Input.GetAxis ("Vertical");
+		transform.Translate (move * Time.deltaTime * Speed, Space.World);
 	}
 }

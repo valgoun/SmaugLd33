@@ -25,15 +25,16 @@ public class Bullet : MonoBehaviour
 
 	}
 
-	public void Initialize (float lifeTime)
+	public void Initialize (float lifeTime, float speedMultiplier)
 	{
 		LifeTime = lifeTime;
+		speed *= speedMultiplier;
 		IsInitiliaze = true;
+		Debug.Log (speed);
 	}
 
 	void OnTriggerEnter (Collider col)
 	{
-		Debug.Log (col.tag);
 		if (col.tag == "Ennemy") {
 			Destroy (col.gameObject);
 		}
