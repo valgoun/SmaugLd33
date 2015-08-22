@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		GetComponent<Rigidbody> ().AddForce (transform.localRotation * Vector3.forward * speed, ForceMode.Impulse);
+		GetComponent<Rigidbody2D> ().AddRelativeForce (Vector2.right * speed, ForceMode2D.Impulse);
 	}
 	
 	// Update is called once per frame
@@ -33,7 +33,7 @@ public class Bullet : MonoBehaviour
 		Debug.Log (speed);
 	}
 
-	void OnTriggerEnter (Collider col)
+	void OnTriggerEnter2D (Collider2D col)
 	{
 		if (col.tag == "Ennemy") {
 			Destroy (col.gameObject);

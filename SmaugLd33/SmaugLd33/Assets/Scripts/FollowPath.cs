@@ -18,7 +18,7 @@ public class FollowPath : MonoBehaviour
 	void Start ()
 	{
 		ActivePoint = path.CheckPoints [0];
-		transform.LookAt (ActivePoint.transform);
+		transform.LookAt (ActivePoint.transform, Vector3.back);
 	}
 	
 	// Update is called once per frame
@@ -27,7 +27,7 @@ public class FollowPath : MonoBehaviour
 		transform.Translate (Vector3.forward * Time.deltaTime * Speed, Space.Self);
 		if ((transform.position - ActivePoint.transform.position).magnitude < MinimumDist) {
 			ActivePoint = path.CheckPoints [path.CheckPoints.IndexOf (ActivePoint) + 1];
-			transform.LookAt (ActivePoint.transform);
+			transform.LookAt (ActivePoint.transform, Vector3.back);
 		}
 	}
 }
