@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
 	void Start ()
 	{
 		GetComponent<Rigidbody2D> ().AddRelativeForce (Vector2.right * speed, ForceMode2D.Impulse);
+		Debug.Log (transform.localRotation.eulerAngles);
 	}
 	
 	// Update is called once per frame
@@ -30,7 +31,6 @@ public class Bullet : MonoBehaviour
 		LifeTime = lifeTime;
 		speed *= speedMultiplier;
 		IsInitiliaze = true;
-		Debug.Log (speed);
 	}
 
 	void OnTriggerEnter2D (Collider2D col)

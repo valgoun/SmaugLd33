@@ -36,7 +36,11 @@ public class Spawnner : MonoBehaviour
 		Ray r = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hit;
 		if (Physics.Raycast (r, out hit)) {
-			transform.LookAt (hit.point);
+			float z = Vector3.Angle (Vector3.right, (hit.point - transform.position));
+			if ((hit.point - transform.position).y < 0)
+				z *= -1;
+			transform.rotation = Quaternion.Euler (0, 0, z);
+			//transform.LookAt (hit.point, Vector3.up);
 		}
 
 		if (Input.GetMouseButton (0)) {
@@ -45,7 +49,7 @@ public class Spawnner : MonoBehaviour
 		if (Input.GetMouseButtonUp (0)) {
 			HoldTime /= MaxHoldTime;
 			HoldTime = Mathf.Clamp01 (HoldTime);
-			GameObject ball = Instantiate (Ball, transform.position, transform.localRotation) as GameObject;
+			GameObject ball = Instantiate (Ball, transform.position, transform.rotation) as GameObject;
 			ball.GetComponent<Bullet> ().Initialize (Mathf.Lerp (MinLifeTime, MaxLifeTime, HoldTime), Mathf.Lerp (1, BulletSpeedMultiplier, HoldTime));
 			HoldTime = 0;
 		}
