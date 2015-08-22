@@ -54,7 +54,7 @@ public class Spawnner : MonoBehaviour
 			HoldTime = 0;
 		}
 
-		Vector3 move = Vector3.up * Input.GetAxis ("Vertical");
+		Vector3 move = Vector3.right * Input.GetAxis ("Vertical");
 		transform.Translate (move * Time.deltaTime * Speed, Space.World);
 	}
 }
