@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b1ddee8af81e081449d815648b989c3c
-timeCreated: 1440250715
+timeCreated: 1440255014
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,7 @@ TextureImporter:
     21300004: Murs_2
     21300006: Murs_3
     21300008: Murs_4
+    21300010: Murs_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,12 +58,12 @@ TextureImporter:
     - name: Murs_0
       rect:
         serializedVersion: 2
-        x: 625
-        y: 232
-        width: 485
-        height: 1722
+        x: 663
+        y: 712
+        width: 400
+        height: 1245
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Murs_1
       rect:
@@ -72,7 +73,7 @@ TextureImporter:
         width: 1276
         height: 1320
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Murs_2
       rect:
@@ -82,7 +83,7 @@ TextureImporter:
         width: 132
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Murs_3
       rect:
@@ -92,7 +93,7 @@ TextureImporter:
         width: 1333
         height: 825
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Murs_4
       rect:
@@ -102,7 +103,17 @@ TextureImporter:
         width: 1276
         height: 1328
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Murs_5
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 240
+        width: 401
+        height: 497
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
