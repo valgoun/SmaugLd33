@@ -30,4 +30,12 @@ public class Bullet : MonoBehaviour
 		LifeTime = lifeTime;
 		IsInitiliaze = true;
 	}
+
+	void OnTriggerEnter (Collider col)
+	{
+		Debug.Log (col.tag);
+		if (col.tag == "Ennemy") {
+			Destroy (col.gameObject);
+		}
+	}
 }
