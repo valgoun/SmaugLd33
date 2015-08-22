@@ -1,9 +1,14 @@
 fileFormatVersion: 2
 guid: b1ddee8af81e081449d815648b989c3c
-timeCreated: 1440250041
+timeCreated: 1440250715
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Murs_0
+    21300002: Murs_1
+    21300004: Murs_2
+    21300006: Murs_3
+    21300008: Murs_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +35,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +53,57 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Murs_0
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 232
+        width: 485
+        height: 1722
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Murs_1
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 221
+        width: 1276
+        height: 1320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Murs_2
+      rect:
+        serializedVersion: 2
+        x: 2385
+        y: 1520
+        width: 132
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Murs_3
+      rect:
+        serializedVersion: 2
+        x: 2929
+        y: 1311
+        width: 1333
+        height: 825
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Murs_4
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 17
+        width: 1276
+        height: 1328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
