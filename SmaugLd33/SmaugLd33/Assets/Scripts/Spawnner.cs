@@ -21,6 +21,9 @@ public class Spawnner : MonoBehaviour
 	[SerializeField]
 	private float
 		BulletSpeedMultiplier = 2.0f;
+	[SerializeField]
+	private GameObject
+		ComboText;
 
 
 	private float HoldTime = 0f;
@@ -50,7 +53,7 @@ public class Spawnner : MonoBehaviour
 			HoldTime /= MaxHoldTime;
 			HoldTime = Mathf.Clamp01 (HoldTime);
 			GameObject ball = Instantiate (Ball, transform.position, transform.rotation) as GameObject;
-			ball.GetComponent<Bullet> ().Initialize (Mathf.Lerp (MinLifeTime, MaxLifeTime, HoldTime), Mathf.Lerp (1, BulletSpeedMultiplier, HoldTime));
+			ball.GetComponent<Bullet> ().Initialize (Mathf.Lerp (MinLifeTime, MaxLifeTime, HoldTime), Mathf.Lerp (1, BulletSpeedMultiplier, HoldTime), ComboText);
 			HoldTime = 0;
 		}
 

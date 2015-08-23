@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ProtectZone : MonoBehaviour
 {
-
+	public int Gold;
 	// Use this for initialization
 	void Start ()
 	{
@@ -19,8 +19,8 @@ public class ProtectZone : MonoBehaviour
 	void OnTriggerEnter2D (Collider2D col)
 	{
 		if (col.tag == "Ennemy") {
-			Debug.Log ("PERDU!!!!!!");
 			Destroy (col.gameObject);
+			Gold--;
 		}
 	}
 }
