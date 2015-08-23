@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b1ddee8af81e081449d815648b989c3c
-timeCreated: 1440255014
+timeCreated: 1440281432
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -88,10 +88,10 @@ TextureImporter:
     - name: Murs_3
       rect:
         serializedVersion: 2
-        x: 2929
-        y: 1311
+        x: 2921
+        y: 1328
         width: 1333
-        height: 825
+        height: 906
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

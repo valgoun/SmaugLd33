@@ -8,6 +8,9 @@ public class Bullet : MonoBehaviour
 	[SerializeField]
 	private float
 		speed = 5f;
+
+	public float
+		rotationspeed = 5f;
 	// Use this for initialization
 	void Start ()
 	{
@@ -18,6 +21,8 @@ public class Bullet : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		transform.Rotate(0f, 0f, rotationspeed);
+
 		if (IsInitiliaze) {
 			if (LifeTime <= 0)
 				Destroy (gameObject);
