@@ -39,6 +39,8 @@ public class DwarfSpwanner : MonoBehaviour
 		for (int i = 0; i < Timeline.Count; i++) {
 			if (timer >= Timeline [i]) {
 				Debug.Log (Paths [PathIndex [i]]);
+				Debug.Log (TimeBetweenSpwan [i]);
+				Debug.Log (NumberOfDwarf [i]);
 				StartCoroutine (SpwanWave (Paths [PathIndex [i]], TimeBetweenSpwan [i], NumberOfDwarf [i]));
 			} else {
 				break;
@@ -61,6 +63,7 @@ public class DwarfSpwanner : MonoBehaviour
 	IEnumerator SpwanWave (PathManager path, float timebetweenspwan, int SpwanNumber)
 	{
 		int number = 0;
+		Debug.Log (path.CheckPoints [0]);
 		while (number < SpwanNumber) {
 			GameObject DwarfClone = Instantiate (Dwarf, path.CheckPoints [0].transform.position, Quaternion.identity) as GameObject;
 			DwarfClone.GetComponent<FollowPath> ().Init (path);
