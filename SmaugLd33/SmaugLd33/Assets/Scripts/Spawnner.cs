@@ -40,8 +40,10 @@ public class Spawnner : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast (r, out hit)) {
 			float z = Vector3.Angle (Vector3.right, (hit.point - transform.position));
+			z = Mathf.Clamp (z, 0f, 40f);
 			if ((hit.point - transform.position).y < 0)
 				z *= -1;
+				
 			transform.rotation = Quaternion.Euler (0, 0, z);
 			//transform.LookAt (hit.point, Vector3.up);
 		}
