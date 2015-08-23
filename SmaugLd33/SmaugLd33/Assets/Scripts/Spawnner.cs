@@ -54,7 +54,7 @@ public class Spawnner : MonoBehaviour
 		if (Input.GetMouseButtonUp (0)) {
 			HoldTime /= MaxHoldTime;
 			HoldTime = Mathf.Clamp01 (HoldTime);
-			GameObject ball = Instantiate (Ball, transform.position, transform.rotation) as GameObject;
+			GameObject ball = Instantiate (Ball, transform.position + transform.right * 25, transform.rotation) as GameObject;
 			ball.GetComponent<Bullet> ().Initialize (Mathf.Lerp (MinLifeTime, MaxLifeTime, HoldTime), Mathf.Lerp (1, BulletSpeedMultiplier, HoldTime), ComboText);
 			HoldTime = 0;
 		}

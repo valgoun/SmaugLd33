@@ -38,6 +38,7 @@ public class DwarfSpwanner : MonoBehaviour
 		timer += Time.deltaTime;
 		for (int i = 0; i < Timeline.Count; i++) {
 			if (timer >= Timeline [i]) {
+				Debug.Log (Paths [PathIndex [i]]);
 				StartCoroutine (SpwanWave (Paths [PathIndex [i]], TimeBetweenSpwan [i], NumberOfDwarf [i]));
 			} else {
 				break;
@@ -47,6 +48,8 @@ public class DwarfSpwanner : MonoBehaviour
 			if (timer >= Timeline [j]) {
 				Timeline.RemoveAt (j);
 				PathIndex.RemoveAt (j);
+				NumberOfDwarf.RemoveAt (j);
+				TimeBetweenSpwan.RemoveAt (j);
 			} else {
 				break;
 			}
